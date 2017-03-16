@@ -235,7 +235,7 @@ render(store.select('tracks'));
   <button id="addTrack">Add track</button>
   <ul id="trackList"></ul>
 
-	<script src="dist/app.bundle.js"></script>
+  <script src="dist/app.bundle.js"></script>
 </body>
 </html>
 ```
