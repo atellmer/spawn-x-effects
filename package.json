@@ -5,6 +5,7 @@
   "author": "AlexPlex",
   "license": "MIT",
   "main": "./lib/spawn-x-effects.umd.js",
+  "typings": "./index.d.ts",
   "homepage": "https://github.com/atellmer/spawn-x-effects",
   "scripts": {
     "build": "npm run build:dev && npm run build:prod",
