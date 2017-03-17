@@ -1,6 +1,6 @@
 {
   "name": "spawn-x-effects",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "effects for spawn-x. (Reactive management for javaScript applications)",
   "authors": [
     "AlexPlex"

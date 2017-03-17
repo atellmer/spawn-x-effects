@@ -3,9 +3,10 @@ import {
   error
 } from './helpers';
 
+let listEffects = [];
 
 function effects(store) {
-  const cascade = (store, action) => effects.list.forEach(fn => fn(store, action));
+  const cascade = (store, action) => listEffects.forEach(fn => fn(store, action));
 
   return next => action => {
     cascade(store, action);
@@ -13,12 +14,14 @@ function effects(store) {
   }
 }
 
-effects.list = [];
-
 effects.run = effect => {
   if (!isFunc(effect)) return error (`spawn-x-effects: effect must be a function!`);
 
-  effects.list.push(effect);
+  listEffects.push(effect);
+}
+
+effects.clear = () => {
+  listEffects = [];
 }
 
 export {
